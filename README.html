@@ -1,3 +1,16 @@
-<h1 id="sometitle">Email Content</h1>
+1. Build using below command:
+mvn clean install
 
-<p>Test <strong>bold</strong> and <em>italic</em></p>
+2. Once built it will create target directory and keep .jar application in that.
+
+3. Use the Dockerfile to build the image.
+
+docker build -t <repotag> .
+
+4. Push the image to Docker hub repo.
+
+docker push <image>
+
+5. Once the image is pushed to the repo. Run the deployment.yaml
+
+kubectl apply -f deploy/deployment.yaml
